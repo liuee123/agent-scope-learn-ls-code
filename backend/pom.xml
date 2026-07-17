@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>io.agentscope.course</groupId>
-    <artifactId>section-01-hello-agentscope</artifactId>
+    <artifactId>backend-agentscope</artifactId>
     <version>1.0.0</version>
-    <name>Section 01 — Hello AgentScope</name>
+    <name>backend-agentscope</name>
     <description>课程导览与环境搭建</description>
 
     <properties>
