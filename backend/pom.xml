@@ -15,7 +15,7 @@
     <artifactId>backend-agentscope</artifactId>
     <version>1.0.0</version>
     <name>backend-agentscope</name>
-    <description>课程导览与环境搭建</description>
+    <description>AgentScope-Java 深度实战课程配套代码</description>
 
     <properties>
         <java.version>21</java.version>
@@ -23,10 +23,16 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot 基础 Starter -->
+        <!-- Spring Boot Web（REST API） -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot WebFlux（SSE 流式响应 + AG-UI 端点） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
         <!-- AgentScope Harness（传递引入 agentscope-core） -->
@@ -34,6 +40,33 @@
             <groupId>io.agentscope</groupId>
             <artifactId>agentscope-harness</artifactId>
             <version>${agentscope.version}</version>
+        </dependency>
+
+        <!-- AgentScope 模型扩展：OpenAI 兼容（DeepSeek 等） -->
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-model-openai</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+
+        <!-- AgentScope 模型扩展：DashScope（阿里云百炼） -->
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-model-dashscope</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+
+        <!-- AgentScope AG-UI Spring Boot Starter（自动注册 /agui/run + 传递引入 extensions-agui） -->
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-agui-spring-boot-starter</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-agui</artifactId>
+            <version>2.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

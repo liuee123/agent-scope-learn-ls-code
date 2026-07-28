@@ -1,6 +1,5 @@
 # ==========================================
-# 第 1 节：课程导览与环境搭建
-# 基础配置 — 仅设置服务端口
+# AgentScope 课程 — 应用配置
 # ==========================================
 
 server:
@@ -10,15 +9,12 @@ spring:
   main:
     banner-mode: off
   application:
-    name: section-01-hello-agentscope
+    name: agentscope-course
 
-# AgentScope 配置（第 2 节开始使用，此处预留）
-# agentscope:
-#   model:
-#     deepseek:
-#       type: openai
-#       base-url: https://api.deepseek.com
-#       api-key: ${DEEPSEEK_API_KEY}
-#     dashscope:
-#       type: dashscope
-#       api-key: ${DASHSCOPE_API_KEY}
+# ==========================================
+# AgentScope AG-UI Starter 配置
+# ==========================================
+agentscope:
+  agui:
+    path-prefix: /agui
+    enable-reasoning: true
